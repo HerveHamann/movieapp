@@ -1,0 +1,95 @@
+.filter-container {
+  display: flex;
+  column-gap: 25px;
+  color: $color-3;
+
+  .dropdown {
+    width: 135px;
+    height: 32px;
+    border: 1px solid $color-3;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 1px;
+    position: relative;
+
+    .dropdown-select {
+      user-select: none;
+      border-radius: 5px;
+      background: $color-1;
+      font-size: 18px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      .icon {
+        font-size: 12px;
+        color: $color-3;
+        position: relative;
+        top: -2px;
+      }
+      .icon-reverse {
+        font-size: 12px;
+        color: $color-3;
+        position: relative;
+        top: -2px;
+
+        animation: rotate 0.8s both cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      @keyframes rotate {
+        0% {
+        }
+
+        100% {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+    .hidden {
+      display: none;
+    }
+    .dropdown-list {
+      width: 100%;
+      position: absolute;
+      width: 135px;
+      left: -1px;
+      top: 26px;
+      z-index: 100;
+      background: $color-1;
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+      border: 1px solid $color-3;
+      border-top: none;
+
+      animation: appear 0.8s both cubic-bezier(0.215, 0.61, 0.355, 1);
+      @keyframes appear {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+      .checkbox-btn {
+        accent-color: $color-1;
+
+        font-size: 18px;
+        padding: 3px 0px 0 9px;
+        user-select: none;
+        label,
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  button {
+    color: $color-3;
+    font-size: 18px;
+    background: $color-1;
+    border: $color-3 solid 1px;
+    padding: 0 6px 0 6px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

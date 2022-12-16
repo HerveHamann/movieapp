@@ -1,0 +1,101 @@
+.header {
+  width: 100%;
+  height: 250px;
+  background: $color-2;
+  color: $color-3;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px $color-3 solid;
+  @include laptop {
+    flex-direction: column;
+  }
+  @include tablet {
+  }
+  .logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    h1 {
+      text-transform: uppercase;
+      border-bottom: 5px $color-4 solid;
+      font-size: 64px;
+      animation: appear 2.5s 0.8s both cubic-bezier(0.215, 0.61, 0.355, 1);
+      @include laptopL {
+        font-size: 48px;
+      }
+      @include tablet {
+        font-size: 32px;
+      }
+    }
+    img {
+      animation: roll 2.5s both cubic-bezier(0.215, 0.61, 0.355, 1);
+      @include laptopL {
+        width: 20%;
+      }
+    }
+  }
+  ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    @include laptopL {
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 14px;
+    }
+    @include mobile {
+      font-size: 10px;
+    }
+    column-gap: 4%;
+    animation: appear 2.5s 0.8s both cubic-bezier(0.215, 0.61, 0.355, 1);
+    li {
+      white-space: nowrap;
+    }
+    li:hover {
+      position: relative;
+      cursor: pointer;
+      &::after {
+        content: "";
+        height: 5px;
+        width: 0;
+        position: absolute;
+        border-radius: 10px;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $color-4;
+        animation: anim 0.6s ease forwards;
+
+        @keyframes anim {
+          to {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes roll {
+  0% {
+    transform: translateX(-400%) rotate(-360deg);
+  }
+
+  100% {
+    transform: translateX(0%) rotate(20deg);
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

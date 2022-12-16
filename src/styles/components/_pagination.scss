@@ -1,0 +1,67 @@
+.pagination {
+  margin: 35px 0 35px 0;
+  display: flex;
+  justify-content: space-between;
+
+  .button-container {
+    display: flex;
+    .prevnext-button {
+      height: 36px;
+      font-size: 16px;
+      text-align: center;
+      padding: 0px 16px 0px 16px;
+      border: 1px solid $color-3;
+      border-radius: 5px;
+      background: unset;
+      margin: 0 2px 0 2px;
+      cursor: pointer;
+      color: $color-3;
+    }
+    .prevnext-button-disabled {
+      height: 36px;
+      font-size: 16px;
+      color: $color-1;
+      padding: 0px 16px 0px 16px;
+      border: 1px solid $color-1;
+      border-radius: 5px;
+      background: unset;
+      margin: 0 2px 0 2px;
+    }
+
+    .prevnext-button:hover {
+      border-radius: 5px;
+      border: 1px solid black;
+      background: linear-gradient($color-1, $color-2);
+      color: $color-3;
+    }
+    .pagination-button {
+      border-radius: 5px;
+      font-size: 16px;
+      width: 42px;
+      height: 36px;
+      border: unset;
+      background: unset;
+      margin: 0 2px 0 2px;
+      cursor: pointer;
+      color: $color-3;
+    }
+    .pagination-button:hover {
+      border-radius: 5px;
+      border: 1px solid $color-2;
+
+      background: linear-gradient($color-1, $color-2);
+      color: $color-3;
+    }
+    .pagination-button-focus {
+      border-radius: 5px;
+      font-size: 16px;
+      width: 42px;
+      height: 36px;
+      border: 1px solid $color-3;
+      background: unset;
+      margin: 0 2px 0 2px;
+      background: $color-3;
+      cursor: pointer;
+    }
+  }
+}

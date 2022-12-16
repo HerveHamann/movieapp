@@ -1,0 +1,39 @@
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $color-2;
+  .settings-container {
+    padding: 50px 0 50px 0;
+    display: flex;
+    column-gap: 80px;
+    width: 90%;
+    @include tablet {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+  .card-container {
+    align-self: center;
+    min-height: 810px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .message {
+    padding-top: 300px;
+    justify-self: center;
+    font-size: 28px;
+    color: $color-3;
+    @include laptop {
+      font-size: 18px;
+    }
+    @include mobile {
+      font-size: 8px;
+    }
+  }
+}
